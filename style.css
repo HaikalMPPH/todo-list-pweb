@@ -1,0 +1,170 @@
+* {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  background-color: #7c6f64;
+}
+
+body {
+  margin: 0;
+  padding: 5rem 0;
+
+  font-size: 100%;
+  line-height: 1.5;
+  font-weight: 500;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  background-color: #7c6f64;
+}
+
+.container {
+  max-width: 20rem;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.btn {
+  margin: 0;
+  padding: 0.1rem 0.4rem;
+
+  font: inherit;
+  font-size: 0.875rem;
+
+  
+  border: 2px solid transparent;
+  box-shadow: 0 0 0 2px #3c3836;
+  border-radius: 0.3rem;
+
+  appearance: none;
+}
+
+.btn:disabled {
+  opacity: 0.6;
+}
+
+.btn--red {
+  color: #3c3836;
+  background-color: #fb4934;
+  box-shadow: 0 0 0 2px #fb4934;
+}
+
+.btn--red:hover {
+  color: #fbf1c7;
+
+  background-color: #cc241d;
+  box-shadow: 0 0 0 2px #cc241d;
+}
+
+.btn--bg-blue {
+  color: #3c3836;
+
+  background-color: #83a598;
+  border-color: #83a598;
+  box-shadow: 0 0 0 2px #83a598;
+}
+
+.btn--bg-blue:hover {
+  color: #fbf1c7;
+  background-color: #458588;
+  border-color: #458588;
+  box-shadow: 0 0 0 2px #458588;
+}
+
+.tasks {
+  display: flex;
+  flex-direction: column;
+  margin: 0 0 2rem;
+  padding: 0;
+  gap: 1rem;
+
+  list-style: none;
+}
+
+.task {
+  position: relative;
+  z-index: 1;
+
+  display: flex;
+  align-items: center;
+  padding: 0.8rem 1rem;
+
+  background-color: #b8bb26;
+  border-radius: 0.4rem;
+}
+
+.task--done {
+  opacity: 1;
+  background-color: #8ec07c;
+}
+
+.task__label {
+  display: block;
+}
+
+.task__checkbox {
+  display: none;
+}
+
+.task__checkbox-custom {
+  display: block;
+
+  width: 1rem;
+  height: 1rem;
+
+  background-color: #fbf1c7;
+  border: 2px solid #fbf1c7;
+  box-shadow: 0 0 0 2px #3c3836;
+  border-radius: 0.3rem;
+}
+
+.task__checkbox:checked + .task__checkbox-custom {
+  background-color: #3c3836;
+}
+
+.task__text {
+  margin: 0 1rem;
+  flex-grow: 1;
+}
+
+.task__delete {
+  margin-left: auto;
+}
+
+.task--done .task__text {
+  text-decoration: line-through;
+}
+
+.create-task {
+  display: flex;
+  flex-direction: column;
+}
+
+.create-task__textarea {
+  width: 100%;
+  height: 4rem;
+  padding: 0.5rem;
+  resize: none;
+
+  font: inherit;
+  font-size: 1rem;
+
+  background-color: #fbf1c7;
+  border: 2px solid #fbf1c7;
+  box-shadow: 0 0 0 2px #3c3836;
+  border-radius: 0.3rem;
+
+  margin: 0 0 1rem;
+}
+
+.create-task__submit {
+  padding-top: 0.4rem;
+  padding-bottom: 0.4rem;
+
+  font-size: 1rem;
+}
